@@ -63,8 +63,10 @@ bay_offset = container_length + 4
 tier_offset = container_height
 row_offset = container_width+1
 
-for bay, tier, row in itertools.product(range(9),range(3),range(4)):
+for gen in range(1):
+    
+    for bay, tier, row in itertools.product(range(8),range(3),range(4)):
 
-    temp_start = ivec3(start.x - bay*bay_offset, start.y + tier*tier_offset, start.z - row*row_offset)
-    temp_end = ivec3(end.x - bay*bay_offset, end.y + tier*tier_offset, end.z - row*row_offset)
-    geo.placeCuboid(ED, temp_start, temp_end, Block(colour(data[19,bay,tier,row])))
+        temp_start = ivec3(start.x - bay*bay_offset, start.y + tier*tier_offset, start.z - row*row_offset)
+        temp_end = ivec3(end.x - bay*bay_offset, end.y + tier*tier_offset, end.z - row*row_offset)
+        geo.placeCuboid(ED, temp_start, temp_end, Block(colour(data[gen,bay,tier,row])))
