@@ -57,16 +57,18 @@ geo.placeCuboid(ED, start, end_glob, Block("minecraft:air"))
 time.sleep(1)
 
 # data.shape = (20,8,3,4,2)
-data = np.load("Results/boat_history_n=50.npy")
+data = np.load("Results/boat_history_n=70.npy")
 
 bay_offset = container_length + 4
 tier_offset = container_height
-row_offset = container_width+1
+row_offset = container_width + 1
 
-for gen in range(1):
+for gen in range(20):
     
     for bay, tier, row in itertools.product(range(8),range(3),range(4)):
 
         temp_start = ivec3(start.x - bay*bay_offset, start.y + tier*tier_offset, start.z - row*row_offset)
         temp_end = ivec3(end.x - bay*bay_offset, end.y + tier*tier_offset, end.z - row*row_offset)
         geo.placeCuboid(ED, temp_start, temp_end, Block(colour(data[gen,bay,tier,row])))
+
+    time.sleep(10)
