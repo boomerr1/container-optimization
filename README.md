@@ -1,8 +1,6 @@
-Ruben Ahrens, s3677532
-Lucas de Wolff, s3672980
-Shaoxuan Zhang, s3426505
 
 # MODA PROJECT: Optimizing container configuration for container ship
+### Ruben Ahrens, s3677532 & Lucas de Wolff, s3672980 & Shaoxuan Zhang, s3426505
 In this project, we present an optimized container loading plan for a cargo ship with specific dimensions of 8 bays, 4 rows, and 3 tiers. Our solution aims to minimize ship instability and unloading time while carrying up to 96 containers destined for three harbors. To achieve this, we employ NSGA-III, a genetic algorithm designed for multi-objective optimization. By exploring the Pareto front, our approach generates stable and efficient solutions. Our findings offer practical applications and improved container loading strategies for cargo ships.
 
 The following files are relevant:
